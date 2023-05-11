@@ -5,9 +5,14 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "csv": "node converterCSV.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@json2csv/plainjs": "^6.1.3",
+    "@json2csv/transforms": "^6.1.3"
+  }
 }
