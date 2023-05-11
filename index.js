@@ -1,13 +1,21 @@
-import { readFileSync, writeFileSync } from "node:fs"
+import { readFileSync, writeFileSync, appendFileSync } from "node:fs"
 
 const readingFile = readFileSync('main-file-data.json', 'utf-8')
 const jsonParse = JSON.parse(readingFile)
 
-function sort(object){
-   Object.keys(object).sort().reduce((objectEntries, key) => {
-      const sortedValue = typeof object[key] == 'object' ? sort(object[key]) : object[key]
-      console.log(sortedValue)
-   }, {})
+
+function sortObject(object){
+   return Object.keys(object).sort()
 }
 
-sort(jsonParse[0])
+writeFileSync('data/key-sorted.json', "[")
+jsonParse.forEach(element => {
+   const toString = JSON.stringify(element)
+   appendFileSync('data/key-sorted.json', toString + ",")
+});
+
+/* for(let line of jsonParse){
+   sortObject(line)
+   const toString = JSON.stringify(line)
+   appendFileSync('data/key-sorted.json', toString + ",")
+} */
