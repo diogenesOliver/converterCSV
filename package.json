@@ -1,0 +1,15 @@
+{
+  "name": "convertercsv",
+  "version": "1.0.0",
+  "description": "This is a simple script with Node to converter JSON to CSV",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
