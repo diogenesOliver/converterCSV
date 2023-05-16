@@ -3,7 +3,6 @@ import { readFileSync, writeFileSync, appendFileSync } from "node:fs"
 const readingFile = readFileSync('main-file-data.json', 'utf-8')
 const jsonParse = JSON.parse(readingFile)
 
-
 function sortObject(object){
    return Object.keys(object).sort()
 }
