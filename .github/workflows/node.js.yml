@@ -30,7 +30,3 @@ jobs:
     - name: Run npm run dev
       run: |
         npm run dev
-    
-    - name: Run npm run csv
-      run: |
-        npm run csv
