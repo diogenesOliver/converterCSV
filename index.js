@@ -13,9 +13,4 @@ jsonParse.forEach(element => {
    const toString = JSON.stringify(element)
    appendFileSync('data/key-sorted.json', toString + ",")
 });
-
-/* for(let line of jsonParse){
-   sortObject(line)
-   const toString = JSON.stringify(line)
-   appendFileSync('data/key-sorted.json', toString + ",")
-} */
+appendFileSync('data/key-sorted.json', "]")
